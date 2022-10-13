@@ -1,7 +1,6 @@
 # Percentage Formatter Task
 
-The purpose of this task is to practice writing simple and concise
-Java lambda expressions.
+The purpose of this task is to practice writing simple and concise Java lambda expressions.
 
 Duration: _30 minutes_
 
@@ -15,21 +14,19 @@ which we want to format to the corresponding `String` value in the format:
 [-]\d+[.\d] %
 ```
 Where `[...]` means optional, `\d` means digit, and `+` means at least one symbol.
-Please note, the space between the number and percent sign.
-This lambda never return `null`.
+Please note, the space between the number and percent sign. This lambda must never return `null`.
 
 The passed value can be anything, even more than **1** or less than **0**.
 The value **1** we consider **100 %**, so **-0.5** would be **-50 %**.
 
 ## Requirements
 
-* Convert the `double` value to the corresponding `String` value which representing the double value as a percent string
-* Never return `null`
-* A `-` sign before the number in a string of negative values
-* A space between the resulting number and the percent sign
-* A maximum of one digit in the fraction part
-* You must round the fraction part mathematically,
-i.e. anything less than **0.5** is rounded down (floor),
+* Convert the `double` value to the corresponding `String` value, representing the double value as a percent string.
+* Never return `null`.
+* A `-` sign before the number in a string of negative values.
+* A space between the resulting number and the percent sign.
+* A maximum of one digit in the fraction part.
+* You must round the fraction part mathematically, i.e. anything less than **0.5** is rounded down (floor),
 and anything greater than or equal to **0.5** is rounded up (ceil). For example:
   * **1.4** => **1**
   * **2.45** => **2**
@@ -39,11 +36,10 @@ and anything greater than or equal to **0.5** is rounded up (ceil). For example:
 
 ## Examples
 
-The lambda can be tested using the following call:
+The lambda can be tested using the following call, which returns a `String` value for testing:
 ```java
 PercentageFormatter.INSTANCE.apply(<double value>);
 ```
-It will return the `String` value for testing.
 
 And here are some expected input/output pairs:
 * **0.42**    => `42 %`
